@@ -1,0 +1,155 @@
+.about {
+  text-transform: uppercase;
+  position: relative;
+  background: #1a1502;
+  padding: 35px;
+  height: 100%;
+  overflow: hidden;
+  &__title {
+    color: $bsLight;
+    font-size: 120px;
+    line-height: 125px;
+  }
+
+  &__sub-title {
+    color: $bsLight;
+  }
+
+  &__text {
+    margin-top: 40px;
+    max-width: 933px;
+    font-family: $secondaryFont;
+    text-transform: uppercase;
+    margin-bottom: 230px;
+  }
+
+  &__description {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 44px;
+    padding-top: 70px;
+    color: $bsLight;
+  }
+
+  .left-shape {
+    top: 140px;
+    left: -250px;
+  }
+
+  .right-shape {
+    top: -20px;
+    right: 30px;
+  }
+
+  .bottom-shape {
+    left: 30px;
+    bottom: -70px;
+  }
+}
+
+.gallery {
+  &__wrapper {
+    display: flex;
+  }
+
+  &__item {
+    width: 331px;
+    height: 422px;
+    &.active {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      z-index: 1031243;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__count {
+    margin-top: 68px;
+    color: $bsLight;
+    display: flex;
+    justify-content: center;
+    font-size: 36px;
+    line-height: 44px;
+    font-family: $primaryFont;
+  }
+
+  .swiper-pagination-fraction {
+    color: #727272;
+  }
+
+  .swiper-pagination {
+    &-current {
+      color: $bsLight;
+      position: relative;
+      &::before {
+        z-index: 123213;
+        top: 0;
+        left: 0;
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        // background: #000;
+      }
+    }
+    &-total {
+      position: relative;
+      color: #727272;
+      &::before {
+        z-index: 123213;
+        top: 0;
+        left: 0;
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.fullscreen-image {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  scale: 0;
+  top: 0;
+  left: 0;
+  transition: all 0.5s ease;
+
+  &.active {
+    scale: 1;
+  }
+
+  &.overlay {
+    z-index: 10;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .close-btn {
+    position: absolute;
+    cursor: pointer;
+    color: $bsLight;
+    top: 15px;
+    right: 15px;
+    background: hsla(0, 0%, 0%, 0.5);
+    padding: 15px 25px;
+    transition: all 0.25s ease-out;
+
+    &:hover {
+      background: hsla(0, 0%, 0%, 0.8);
+    }
+  }
+}

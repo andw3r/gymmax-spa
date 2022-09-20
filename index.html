@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+
+  <body class="body" id="body smooth-wrapper">
+    <div class="preloader">
+      <div class="lds-ellipsis">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <div class="fullscreen-image">
+      <img src="img/01.jpg" alt="image" />
+      <span class="close-btn">close</span>
+    </div>
+    <main class="main" id="main smooth-content">
+      <section class="header h-screen" id="header">
+        <img src="img/shape1.svg" class="shape left-shape" alt="" />
+        <img
+          src="img/roundedshape.svg"
+          class="shape rounded-top-shape"
+          alt=""
+        />
+        <img
+          src="img/roundedshape.svg"
+          class="shape rounded-right-shape"
+          alt=""
+        />
+        <img
+          src="img/roundedshape.svg"
+          class="shape rounded-bottom-shape"
+          alt=""
+        />
+
+        <div class="header__text">
+          <h1 class="header__title" id="header__title">gymmax spa</h1>
+          <p class="header__description" id="header__description">
+            modern spa center in the heart of kiev
+            <span class="grey-text">“by gymmax”</span>
+            we are located on dragomiras street 15/2
+          </p>
+        </div>
+
+        <nav class="nav" id="nav">
+          <ul class="nav__menu">
+            <li class="nav__item"><a href="#">about us</a></li>
+            <li class="nav__item"><a href="#">recreation areas</a></li>
+            <li class="nav__item"><a href="#">services</a></li>
+            <li class="nav__item"><a href="#">contact</a></li>
+            <li class="nav__item"><a href="#">UA</a></li>
+          </ul>
+        </nav>
+        <span class="mobile-menu active">menu</span>
+        <span class="nav-close">close</span>
+      </section>
+
+      <section class="about" id="about">
+        <img src="img/shape1.svg" class="shape left-shape" alt="" />
+        <img src="img/roundedshape.svg" class="shape right-shape" alt="" />
+        <img src="img/shape1.svg" class="shape bottom-shape" alt="" />
+
+        <h2 class="about__title">ABOUT US</h2>
+        <div class="about__text">
+          <h4 class="about__sub-title">Satisfied customer - is our mission</h4>
+
+          <p class="about__description">
+            Upstate New Yorker who moved to the
+            <span class="gold-text">big city in 2009.</span> Dan is currently
+            the lead product designer of native apps at Vimeo in New York City.
+          </p>
+          <p class="about__description">
+            He has been a design professional for
+            <span class="gold-text">over 15 years</span> with extensive
+            experience creating user centric products in the video space. He
+            currently resides in New Jersey with his lovely wife and daughter.
+          </p>
+        </div>
+
+        <div class="gallery swiper-container">
+          <div class="gallery__wrapper swiper-wrapper">
+            <div class="swiper-slide gallery__item">
+              <img class="gallery__image" src="./img/01.jpg" alt="image" />
+            </div>
+
+            <div class="swiper-slide gallery__item">
+              <img class="gallery__image" src="./img/02.jpg" alt="image" />
+            </div>
+
+            <div class="swiper-slide gallery__item">
+              <img class="gallery__image" src="./img/03.jpg" alt="image" />
+            </div>
+
+            <div class="swiper-slide gallery__item">
+              <img class="gallery__image" src="./img/04.jpg" alt="image" />
+            </div>
+
+            <div class="swiper-slide gallery__item">
+              <img class="gallery__image" src="./img/05.jpg" alt="image" />
+            </div>
+          </div>
+
+          <div class="gallery__count"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

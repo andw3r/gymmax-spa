@@ -1,0 +1,44 @@
+body {
+  font-family: $mainFont;
+  z-index: 123123;
+  overflow-x: hidden;
+  &.lock {
+    overflow: hidden;
+  }
+
+  &.loaded {
+    .preloader {
+      top: -100%;
+    }
+  }
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.container {
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+  @media screen and (max-width: $breakpointLg) {
+    padding: 0 15px;
+  }
+}
+
+.grey-text {
+  color: #727272;
+}
+
+.gold-text {
+  color: #c2a26a;
+}
+
+.shape {
+  scale: 0.6;
+  z-index: -1;
+  position: absolute;
+  @media screen and (max-width: $breakpointLg) {
+    transform: translate(0, 0) !important;
+  }
+}

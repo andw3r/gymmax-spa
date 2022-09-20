@@ -1,0 +1,110 @@
+.header {
+  text-transform: uppercase;
+  position: relative;
+  padding: 35px;
+  background: #ebe6d3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &__title {
+    font-size: 211px;
+    line-height: 219px;
+    text-align: center;
+    padding-bottom: 15px;
+  }
+
+  &__description {
+    max-width: 860px;
+    font-size: 26px;
+    line-height: 44px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .nav {
+    transition: all 0.5s ease;
+    &__menu {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__item {
+      position: relative;
+      background: url("../img/arrow.svg") no-repeat left;
+      padding-left: 45px;
+      &:last-child {
+        background: none;
+      }
+
+      a {
+        position: relative;
+        color: $bsDark;
+        font-size: 30px;
+        line-height: 31px;
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          background: #000;
+          height: 1px;
+          width: 0%;
+          transition: 0.5s ease-in-out;
+        }
+        &:hover::before {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .nav-close {
+    position: absolute;
+    right: 30px;
+    top: -100%;
+    cursor: pointer;
+    transition: all 0.6s ease;
+    &.active {
+      top: 30px;
+    }
+  }
+
+  .mobile-menu {
+    font-family: $primaryFont;
+    font-size: 25px;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.4s ease;
+
+    &.active {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    @media screen and (min-width: 992px) {
+      display: none;
+    }
+  }
+
+  // shapes
+  .left-shape {
+    left: -350px;
+  }
+
+  .rounded-top-shape {
+    top: -270px;
+    left: 25%;
+  }
+
+  .rounded-right-shape {
+    top: -280px;
+    right: -280px;
+  }
+
+  .rounded-bottom-shape {
+    right: -370px;
+    bottom: -370px;
+  }
+}
