@@ -5,14 +5,17 @@ window.addEventListener("load", function () {
 gsap.registerPlugin(ScrollTrigger);
 
 const tl = gsap.timeline();
-tl.from(".about", { yPercent: -100 });
 
-ScrollTrigger.create({
-  animation: tl,
-  trigger: ".header",
-  start: "top top",
-  pin: true,
-  pinSpacing: false,
+window.addEventListener("DOMContentLoaded", () => {
+  tl.from(".about", { yPercent: -100 });
+
+  ScrollTrigger.create({
+    animation: tl,
+    trigger: ".header",
+    start: "top top",
+    pin: true,
+    pinSpacing: false,
+  });
 });
 
 var sliderSelector = ".swiper-container",
