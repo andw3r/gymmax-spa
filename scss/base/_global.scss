@@ -2,6 +2,7 @@ body {
   font-family: $mainFont;
   z-index: 123123;
   overflow-x: hidden;
+
   &.lock {
     overflow: hidden;
   }
@@ -11,6 +12,10 @@ body {
       top: -100%;
     }
   }
+}
+
+.main {
+  overflow-x: hidden;
 }
 
 .h-screen {

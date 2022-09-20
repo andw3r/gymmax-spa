@@ -84,7 +84,6 @@ video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline;
 }
 
 article,
@@ -170,6 +169,10 @@ body.lock {
 }
 body.loaded .preloader {
   top: -100%;
+}
+
+.main {
+  overflow-x: hidden;
 }
 
 .h-screen {
@@ -380,6 +383,7 @@ body.loaded .preloader {
   font-family: "FuturaPT-BookObl", sans-serif;
   font-size: 25px;
   text-align: center;
+  margin-bottom: 30px;
   cursor: pointer;
   opacity: 0;
   z-index: -1;
@@ -654,6 +658,9 @@ body.loaded .preloader {
   .header__description {
     font-size: 12px;
     line-height: 20px;
+  }
+  .header .rounded-bottom-shape {
+    display: none;
   }
   .about__title {
     font-size: 48px;
